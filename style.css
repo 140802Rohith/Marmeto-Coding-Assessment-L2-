@@ -1,0 +1,156 @@
+ <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .thumbnail {
+            margin: 0 5px;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 50%; /* Make it circular */
+            cursor: pointer;
+        }
+
+        .thumbnail img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .selectors {
+            margin-top: 20px;
+display:inline-block;
+align-items:space-between;
+border-radius: 0%;
+backgound-color:lightgrey;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .description {
+            margin-top: 30px;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        #productTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        #productTitle hr {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        #productPrice {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #comparePrice {
+            text-decoration: line-through;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Circular color selectors */
+        .color-selector {
+            display: flex;
+            justify-content: left;
+            margin-top: 10px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            border-radius: 50%; /* Make it circular */
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .color-option.selected {
+            border-color: grey; /* Highlight color for selected */
+            background-color: grey; /* Background color for selected */
+        }
+
+        .color-option.selected::after {
+            content: '✔'; /* Display tick mark or any indicator */
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            margin-top: -5px;
+        }
+
+        .discount {
+            font-size: 20px;
+            color: red; /* Correct CSS property for text color */
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .selectors {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>

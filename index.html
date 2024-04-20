@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+ 
+    <div class="container">
+        <div class="product-image">
+            <img id="mainImage" src="https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_base_26_09_2023_700x933.jpg" alt="Product Image">
+            <div class="thumbnails">
+                <div class="thumbnail" onclick="changeImage('https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_sleeve_3_2_2023_700x933.jpg')">
+                    <img src="https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_sleeve_3_2_2023_700x933.jpg" alt="Thumbnail 1">
+                </div>
+                <div class="thumbnail" onclick="changeImage('https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_full_view_3_2_2023_700x933.jpg')">
+                    <img src="https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_full_view_3_2_2023_700x933.jpg" alt="Thumbnail 2">
+                </div>
+                <div class="thumbnail" onclick="changeImage('https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_back_3_2_2023_700x933.jpg')">
+                    <img src="https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_back_3_2_2023_700x933.jpg" alt="Thumbnail 3">
+                </div>
+                <div class="thumbnail" onclick="changeImage('https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_sleeve_2_3_2_2023_700x933.jpg')">
+                    <img src="https://www.beyoung.in/api/cache/catalog/products/shirt_squre_image_update_14_3_2022/sky_blue_cotton_solid_shirts_for_men_sleeve_2_3_2_2023_700x933.jpg" alt="Thumbnail 4">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info">
+<p>Marmeto</p>
+            <div id="productTitle">
+                <h1>Linen Blue Shirt</h1>
+            </div>
+
+
+            <hr>
+            <p id="productVendor">Price</p>
+            <p id="productPrice">$100 <span class="discount">20% Off</span></p>
+            <p id="comparePrice">$120</p>
+            <hr>
+            <h4>Choose a color</h4>
+            <div class="selectors">
+                <div class="color-selector">
+                    <div class="color-option" style="background-color: red;" onclick="selectColor('red')"></div>
+                    <div class="color-option" style="background-color: blue;" onclick="selectColor('blue')"></div>
+                    <div class="color-option" style="background-color: black;" onclick="selectColor('black')"></div>
+                    <div class="color-option" style="background-color: yellow;" onclick="selectColor('yellow')"></div>
+                </div>
+                <hr>
+                <div>
+                    <label>Choose a Size:</label><br><br>
+                    <input type="radio" name="size" value="small" id="sizeSmall">
+                    <label for="sizeSmall">Small</label>
+                    <input type="radio" name="size" value="medium" id="sizeMedium">
+                    <label for="sizeMedium">Medium</label>
+                    <input type="radio" name="size" value="large" id="sizeLarge">
+                    <label for="sizeLarge">Large</label>
+                    <input type="radio" name="size" value="xl" id="sizeXL">
+                    <label for="sizeXL">Extra Large</label>
+                    <input type="radio" name="size" value="xxl" id="sizeXXL">
+                    <label for="sizeXXL">XXL</label>
+                </div>
+                <div class="selectors"style="margin-top: 10px; margin-bottom:10px; background-color:lightgrey; border-radius: 20px;">
+                    <button type="button" onclick="updateQuantity(-1)" style="margin-top: 10px; background-color:lightgrey; border-radius: 20px;">-</button>
+                    <input type="number" id="quantitySelector" value="1" min="1" style="margin-top: 10px; width:25px; background-color:lightgrey; bodercolor:lightgrey;">
+                    <button type="button" onclick="updateQuantity(1)" style="margin-top: 10px; background-color:lightgrey; border-radius: 20px;">+</button>
+                </div>
+                <button onclick="addToCart()" style="margin-top: 10px; background-color:blue;">Add to Cart</button>
+            </div>
+            <hr>
+            <div>
+                <h2>Description</h2>
+                <p id="productDescription">The Linen Blue shirt is a stylish wear crafted from premium materials for a combination of style, durability, and reliability. It fits seamlessly into any wardrobe, offering both comfort and a timeless look.</p>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
